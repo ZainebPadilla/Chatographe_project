@@ -7,3 +7,17 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+
+adjective = ["mignon", "joueur", "doux", "câlin", "curieux", "énergique", "gracieux", "majestueux"]
+breed_cat = ["Siamois", "Persan", "Sphynx", "Abyssin", "Burmese", "Sacré de Birmanie", "Marine coon"]
+actions = ["joue avec une balle", "dort", "observe", "s'étire", "chasse", "se prélasse au soleil", "explore son environnement", "fait sa toilette", "ronronne doucement"]
+
+20.times do |i|
+  Item.create!(
+    title: "Chaton mignon #{i+1}",
+    description: "Un #{adjective} chaton #{breed_cat} qui #{actions}.",
+    price: rand(5.0..50.0).round(2),
+    image_url: "https://pixabay.com/300/#{200 + i}" #site photo de chat
+  )
+end
+
