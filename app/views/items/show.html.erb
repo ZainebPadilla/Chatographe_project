@@ -1,10 +1,26 @@
-<p style="color: green"><%= notice %></p>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="show.css">
+    <title>Card</title>
+</head>
+<body>
 
-<%= render @item %>
+<div class="notice">
+  <p style="color: green"><%= notice %></p>
+</div>
 
-<div>
+<div class="item-details">
+  <%= render @item %>
+</div>
+
+<div class="actions">
   <%= link_to "Edit this item", edit_item_path(@item) %> |
   <%= link_to "Back to items", items_path %>
+</div>
 
+<div class="destroy">
   <%= button_to "Destroy this item", @item, method: :delete %>
 </div>

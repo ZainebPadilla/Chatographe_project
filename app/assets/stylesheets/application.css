@@ -13,3 +13,68 @@
  *= require_tree .
  *= require_self
  */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.footer {
+    font-family: 'Courier New', monospace;
+    background-color: #212020;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 5px 0px;
+    box-sizing: border-box;
+}
+.logo-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-left: 50px;
+    padding-top: 5px;
+    font-size: 0.8em;
+}
+.logo-footer img {
+    max-width: 60px;             /* Limite la taille du logo */
+    margin-bottom: 10px;
+    padding-right: 40px;
+
+}
+/* Conteneur des colonnes */
+/* Styles génériques pour toutes les colonnes */
+.footer-column {
+    flex: 1;               /* Chaque colonne prend un espace égal */
+    min-width: 150px;      /* Largeur minimale des colonnes */
+    padding: 5px;
+    margin-left: 200px;
+    justify-content: space-evenly;
+}
+.footer-column h3 {
+    text-transform: uppercase;
+    color: #076c07;
+    margin-bottom: 5px;
+    font-size: 0.8em;
+}
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 0.8em;
+}
+.footer-column a {
+    text-decoration: none;
+    color: #ffffff;
+}
+.footer-column a:hover {
+    color: #f39c12;
+}
+.footer-copyright p {
+    font-size: 0.8em;
+}
