@@ -8,3 +8,8 @@
 
   <%= button_to "Destroy this item", @item, method: :delete %>
 </div>
+
+<h1><%= @item.title %></h1>
+<p><%= @item.description %></p>
+<p>Prix: <%= number_to_currency(@item.price) %></p>
+<%= image_tag @item.image_url, alt: @item.title %>
