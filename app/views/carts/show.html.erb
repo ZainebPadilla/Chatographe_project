@@ -4,8 +4,9 @@
 <ul>
   <% @items.each do |item| %>
   <li>
-    <strong><%= item.name %></strong> - <%= number_to_currency(item.price) %>
-    <%= link_to 'Retirer', remove_item_cart_path(item), method: :delete, data: { confirm: 'Êtes-vous sûr ?' } %>
+    <strong><%= item.title %></strong> - <%= number_to_currency(item.price) %>
+    <%= link_to "Retirer", remove_item_cart_path(item_id: item.id), method: :delete, class: "btn btn-danger" %>
+
   </li>
   <% end %>
 </ul>

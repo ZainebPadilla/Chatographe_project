@@ -11,6 +11,7 @@ class User < ApplicationRecord
   private
 
   def create_cart
-    Cart.create(user: self)
+    #Cart.create(user: self)
+    self.create_cart!
   end
 end
