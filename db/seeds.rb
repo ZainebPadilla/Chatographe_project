@@ -16,10 +16,10 @@ Item.destroy_all
 
 20.times do |i|
   Item.create!(
-    title: "Chaton mignon #{i+1}",
+    title: "Chaton mignon #{i + 1}",
     description: "Un #{adjective} chaton #{breed_cat} qui #{actions}.",
     price: rand(5.0..50.0).round(2),
-    image_url: "https://pixabay.com/300/#{200 + i}" #site photo de chat
+    image_url: "https://pixabay.com/300/#{i + 1}" #site photo de chat
   )
 end
 
