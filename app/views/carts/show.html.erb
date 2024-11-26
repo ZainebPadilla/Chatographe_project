@@ -1,20 +1,22 @@
-<h1>Votre Panier</h1>
+<div class="container mt-5">
 
-<% if @items.any? %>
-<ul>
-  <% @items.each do |item| %>
-  <li>
-    <strong><%= item.name %></strong> - <%= number_to_currency(item.price) %>
-    <%= link_to 'Retirer', remove_item_cart_path(item), method: :delete, data: { confirm: 'Êtes-vous sûr ?' } %>
-  </li>
-  <% end %>
-</ul>
+      <h1>Votre Panier</h1>
 
-<p>
-  Total : <%= number_to_currency(@items.sum(&:price)) %>
-</p>
-<% else %>
-<p>Votre panier est vide.</p>
-<% end %>
+      <% if @items.any? %>
+      <ul>
+        <% @items.each do |item| %>
+        <li>
+          <strong><%= item.name %></strong> - <%= number_to_currency(item.price) %>
+          <%= link_to 'Retirer', remove_item_cart_path(item), method: :delete, data: { confirm: 'Êtes-vous sûr ?' } %>
+        </li>
+        <% end %>
+      </ul>
 
-<%= link_to 'Continuer vos achats', items_path %>
+      <p>
+        Total : <%= number_to_currency(@items.sum(&:price)) %>
+      </p>
+      <% else %>
+      <p>Votre panier est vide.</p>
+      <% end %>
+
+      <%= link_to 'Continuer vos achats', items_path %>

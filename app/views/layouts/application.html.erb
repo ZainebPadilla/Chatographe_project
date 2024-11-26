@@ -41,11 +41,11 @@
     <!-- Logo ou Nom de l'application -->
     <%= link_to "Chatographe", root_path, class: "navbar-brand" %>
 
-    <!-- Boutons conditionnels -->
+   
     <div class="collapse navbar-collapse">
       <ul class="navbar-nav ms-auto">
         <% if user_signed_in? %>
-          <!-- Si l'utilisateur est connecté -->
+
           <li class="nav-item">
             <%= link_to "Modifier mon profil", edit_user_registration_path, class: "nav-link" %>
           </li>
