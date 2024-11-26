@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
+  
  
   devise_for :users
+  resources :orders, only: [:new, :create]
   resources :items
   resource :cart, only: [:show] do
     post 'add_item/:item_id', to: 'carts#add_item', as: 'add_item'
