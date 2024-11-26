@@ -13,22 +13,4 @@
  *= require_tree .
  *= require_self
  */
- @import 'bootstrap';
-
- .navbar {
-    background-color: #003366; /* Bleu foncé */
-  }
-  
-  .navbar .navbar-brand,
-  .navbar .nav-link {
-    color: #ffffff; /* Blanc */
-  }
-  
-  .navbar .nav-link.active {
-    font-weight: bold; /* Mettre en gras le lien actif */
-  }
-  
-  /* Optionnel : Changer la couleur du texte au survol */
-  .navbar .nav-link:hover {
-    color: #cccccc; /* Gris clair au survol */
-  }
+ 
