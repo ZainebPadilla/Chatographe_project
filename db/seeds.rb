@@ -12,6 +12,8 @@ adjective = ["mignon", "joueur", "doux", "câlin", "curieux", "énergique", "gra
 breed_cat = ["Siamois", "Persan", "Sphynx", "Abyssin", "Burmese", "Sacré de Birmanie", "Marine coon"]
 actions = ["joue avec une balle", "dort", "observe", "s'étire", "chasse", "se prélasse au soleil", "explore son environnement", "fait sa toilette", "ronronne doucement"]
 
+Item.destroy_all
+
 20.times do |i|
   Item.create!(
     title: "Chaton mignon #{i+1}",
@@ -21,3 +23,4 @@ actions = ["joue avec une balle", "dort", "observe", "s'étire", "chasse", "se p
   )
 end
 
+puts "chaton créé"
