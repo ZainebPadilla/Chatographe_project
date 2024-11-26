@@ -9,42 +9,42 @@
   <%= csp_meta_tag %>
 
 
-    <link rel="manifest" href="/manifest.json">
-    <link rel="icon" href="/icon.png" type="image/png">
-    <link rel="icon" href="/icon.svg" type="image/svg+xml">
-    <link rel="apple-touch-icon" href="/icon.png">
-    <link href="https://unpkg.com/bootswatch@5.3.2/dist/flatly/bootstrap.min.css" rel="stylesheet">
-
-    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
-    <%= javascript_importmap_tags %>
-  </head>
-
-  <%= yield :head %>
-
-
   <link rel="manifest" href="/manifest.json">
   <link rel="icon" href="/icon.png" type="image/png">
   <link rel="icon" href="/icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/icon.png">
-
+  <link href="https://unpkg.com/bootswatch@5.3.2/dist/flatly/bootstrap.min.css" rel="stylesheet">
 
   <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
   <%= javascript_importmap_tags %>
-  <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
+</head>
+
+<%= yield :head %>
+
+
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/icon.png" type="image/png">
+<link rel="icon" href="/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/icon.png">
+
+
+<%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+<%= javascript_importmap_tags %>
+<%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
 
 </head>
 
 <body>
 
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <div class="container">
-    <!-- Logo ou Nom de l'application -->
-    <%= link_to "Chatographe", root_path, class: "navbar-brand" %>
+    <div class="container">
+      <!-- Logo ou Nom de l'application -->
+      <%= link_to "Chatographe", root_path, class: "navbar-brand" %>
 
-   
-    <div class="collapse navbar-collapse">
-      <ul class="navbar-nav ms-auto">
-        <% if user_signed_in? %>
+
+      <div class="collapse navbar-collapse">
+        <ul class="navbar-nav ms-auto">
+          <% if user_signed_in? %>
 
           <li class="nav-item">
             <%= link_to "Modifier mon profil", edit_user_registration_path, class: "nav-link" %>
@@ -52,21 +52,24 @@
           <li class="nav-item">
             <%= button_to "Se déconnecter", destroy_user_session_path, method: :delete, class: "btn btn-outline-danger nav-link" %>
           </li>
-        <% else %>
-                   <li class="nav-item">
+          <li class="nav-item">
+            <%= link_to 'Mon Panier', cart_path, class: 'btn btn-primary' %>
+          </li>
+          <% else %>
+          <li class="nav-item">
             <%= link_to "Se connecter", new_user_session_path, class: "btn btn-outline-primary me-2" %>
           </li>
           <li class="nav-item">
             <%= link_to "S'inscrire", new_user_registration_path, class: "btn btn-primary" %>
           </li>
-        <% end %>
-      </ul>
+          <% end %>
+        </ul>
+      </div>
     </div>
-  </div>
-</nav>
+  </nav>
 
   <%= yield %>
-  <%= link_to 'Mon Panier', cart_path, class: 'btn btn-primary' %>
+
 </body>
 
 </html>

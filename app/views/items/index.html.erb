@@ -6,11 +6,12 @@
 
 <div id="items">
   <% @items.each do |item| %>
-    <%= render item %>
-    <p>
-      <%= link_to "Show this item", item %>
-    </p>
+  <%= render item %>
+  <p>
+    <%= link_to "Show this item", item %>
+  </p>
   <% end %>
-</div>
 
+</div><% if user_signed_in? %>
 <%= link_to "New item", new_item_path %>
+<% end %>
