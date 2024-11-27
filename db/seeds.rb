@@ -7,7 +7,6 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
-
 adjective = ["mignon", "joueur", "doux", "câlin", "curieux", "énergique", "gracieux", "majestueux"]
 breed_cat = ["Siamois", "Persan", "Sphynx", "Abyssin", "Burmese", "Sacré de Birmanie", "Marine coon"]
 actions = ["joue avec une balle", "dort", "observe", "s'étire", "chasse", "se prélasse au soleil", "explore son environnement", "fait sa toilette", "ronronne doucement"]
