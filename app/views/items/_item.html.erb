@@ -1,6 +1,8 @@
-<div class="item">
-  <h2><%= item.title %></h2>
-  <p><%= item.description %></p>
-  <p><%= number_to_currency(item.price) %></p>
- <%= image_tag(item.image_url, alt: item.title, width: 200) %>
+<div class="card">
+  <img src="<%= item.image_url %>" class="card-img-top" alt="<%= item.title %>">
+  <div class="card-body">
+    <h5 class="card-title"><%= item.title %></h5>
+    <p class="card-text"><%= item.description %></p>
+    <p><%= number_to_currency(item.price) %></p>
+  </div>
 </div>

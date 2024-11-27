@@ -1,13 +1,24 @@
-
 <h1>Liste des chatons</h1>
 
-<div class="items">
-  <% @item.each do |item| %>
-    <div class="item">
-      <h2><%= item.title %></h2>
-      <p><%= item.description %></p>
-      <p><%= number_to_currency(item.price) %></p>
-      <img src="<%= item.image_url %>" alt="<%= item.title %>" width="200" />
-    </div>
-  <% end %>
+<div class="container">
+  <div class="row">
+    <% @items.each do |item| %>
+      
+    
+      <div class="col-md-3 mb-4">
+        <div class="card">
+          <img src="<%= item.image_url %>" class="card-img-top" alt="<%= item.title %>">
+          <div class="card-body">
+            <h5 class="card-title"><%= item.title %></h5>
+            <p class="card-text"><%= item.description %></p>
+            <p><%= number_to_currency(item.price) %></p>
+          </div>
+          <div class="card-footer">
+            <%= link_to "Show this item", item, class: "btn btn-primary" %> 
+          </div>
+        </div>
+      </div>
+
+    <% end %>
+  </div>
 </div>
