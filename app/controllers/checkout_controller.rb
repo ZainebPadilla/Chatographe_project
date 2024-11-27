@@ -35,15 +35,6 @@ class CheckoutController < ApplicationController
   end
 
   def cancel
-    @session = Stripe::Checkout::Session.retrieve(params[:session_id])
-    @payment_intent = Stripe::PaymentIntent.retrieve(@session.payment_intent)
-
-    if @session.metadata && @session.metadata['event_id']
-      @event_id = @session.metadata['event_id']
-    else
-      flash[:error] = "Event ID non trouvé."
-      redirect_to root_path and return
-    end
-    redirect_to root_path
+    redirect_to root_path, alert: "Paiement annulé."
   end
 end
