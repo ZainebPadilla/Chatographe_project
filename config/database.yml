@@ -22,7 +22,7 @@ default: &default
 
 development:
   <<: *default
-  url: <%= ENV['DATABASE_URL'] %>
+  database: chatographe_project_development
 
   # The specified database role being used to connect to PostgreSQL.
   # To create additional roles in PostgreSQL see `$ createuser --help`.
@@ -80,4 +80,6 @@ test:
 #
 production:
   <<: *default
-  url: <%= ENV['DATABASE_URL'] %>
+  database: chatographe_project_production
+  username: chatographe_project
+  password: <%= ENV["CHATOGRAPHE_PROJECT_DATABASE_PASSWORD"] %>

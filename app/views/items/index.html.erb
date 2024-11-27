@@ -6,7 +6,7 @@
 
 <div id="items">
   <% @items.each do |item| %>
-  <%= render item %>
+  <%= render "item", item: item %>
   <p>
     <%= link_to "Show this item", item %>
   </p>
