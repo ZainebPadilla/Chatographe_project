@@ -6,6 +6,8 @@ class User < ApplicationRecord
 
   has_one :cart, dependent: :destroy
 
+   # Validation pour les champs ajoutés
+   validates :name, presence: true
   after_create :create_cart
 
   private
