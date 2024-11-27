@@ -18,5 +18,5 @@
   <% else %>
   <p>Votre panier est vide.</p>
   <% end %>
-
+  <%= button_to "Passer commande (NEXT GEN)", checkout_create_path(total: @items.sum(&:price)), class: "btn btn-primary", data: { turbo: false } %>
   <%= link_to 'Continuer vos achats', items_path %>
