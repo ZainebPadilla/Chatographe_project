@@ -21,20 +21,29 @@ class CheckoutController < ApplicationController
       ],
       mode: 'payment',
       success_url: checkout_success_url + '?session_id={CHECKOUT_SESSION_ID}',
-      cancel_url: checkout_cancel_url
+      cancel_url: checkout_cancel_url + '?session_id={CHECKOUT_SESSION_ID}',
+      metadata: { event_id: @event_id }
     )
     redirect_to @session.url, allow_other_host: true
+    
   end
 
   def success
     @session = Stripe::Checkout::Session.retrieve(params[:session_id])
     @payment_intent = Stripe::PaymentIntent.retrieve(@session.payment_intent)
-    #@event_id = @session.metadata.event_id
+    
   end
 
   def cancel
     @session = Stripe::Checkout::Session.retrieve(params[:session_id])
     @payment_intent = Stripe::PaymentIntent.retrieve(@session.payment_intent)
-    #@event_id = @session.metadata.event_id 
+
+    if @session.metadata && @session.metadata['event_id']
+      @event_id = @session.metadata['event_id']
+    else
+      flash[:error] = "Event ID non trouvé."
+      redirect_to root_path and return
+    end
+    redirect_to root_path
   end
 end
