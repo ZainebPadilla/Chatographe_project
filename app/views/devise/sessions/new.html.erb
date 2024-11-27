@@ -7,22 +7,23 @@
         </div>
         <div class="card-body">
           <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-            <div class="form-group mb-3">
-              <%= f.label :email, "Adresse Email", class: "form-label" %>
-              <%= f.email_field :email, autofocus: true, class: "form-control" %>
-            </div>
+          <div class="form-group mb-3">
+            <%= f.label :email, "Adresse Email", class: "form-label" %>
+            <%= f.email_field :email, autofocus: true, class: "form-control" %>
+          </div>
 
-            <div class="form-group mb-3">
-              <%= f.label :password, "Mot de Passe", class: "form-label" %>
-              <%= f.password_field :password, class: "form-control" %>
-            </div>
+          <div class="form-group mb-3">
+            <%= f.label :password, "Mot de Passe", class: "form-label" %>
+            <%= f.password_field :password, class: "form-control" %>
+          </div>
 
-            <div class="form-check mb-3">
-              <%= f.check_box :remember_me, class: "form-check-input" %>
-              <%= f.label :remember_me, "Se souvenir de moi", class: "form-check-label" %>
-            </div>
+          <div class="form-check mb-3">
+            <%= f.check_box :remember_me, class: "form-check-input" %>
+            <%= f.label :remember_me, "Se souvenir de moi", class: "form-check-label" %>
+          </div>
 
-            <%= f.submit "Se connecter", class: "btn btn-success btn-block" %>
+          <%= f.submit "Se connecter", class: "btn btn-success btn-block" %>
+          <%= link_to "S'inscrire", new_user_registration_path, class: "btn btn-primary" %>
           <% end %>
         </div>
         <div class="card-footer text-center">
