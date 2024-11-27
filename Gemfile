@@ -20,7 +20,7 @@ gem "jbuilder"
 # Use Redis adapter to run Action Cable in production
 # gem "redis", ">= 4.0.1"
 gem "stripe"
-gem "dotenv"
+gem 'dotenv'
 gem "table_print"
 gem 'stringio', '3.0.4'
 
