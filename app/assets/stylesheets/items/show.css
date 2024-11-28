@@ -14,7 +14,7 @@
 /* Conteneur pour l'image et le titre (gauche) */
 .product-left {
     width: 400px; /* Largeur fixe pour agrandir la card */
-    height: 400px; /* Hauteur égale à la largeur pour un carré parfait */
+    height: 445px; /* Hauteur égale à la largeur pour un carré parfait */
     display: flex;
     text-align: center;
     flex-direction: column; /* Alignement en colonne pour l'image et le titre */
@@ -24,6 +24,8 @@
     box-shadow: 20px 4px 18px rgba(0, 0, 0, 0.1); /* Ombre pour l'effet de card */
     margin-right: 20px; /* Espacement entre l'image et la description */
     margin-top: 40px;
+    overflow: hidden; /* Pour s'assurer que l'image ne dépasse pas du conteneur */
+
 }
   /* Titre du produit (au-dessus de l'image) */
 .product-title {
