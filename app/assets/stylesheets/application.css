@@ -8,86 +8,119 @@
  * You're free to add application-wide styles to this file and they'll appear at the bottom of the
  * compiled file so the styles you add here take precedence over styles defined in any other CSS
  * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
  *
  *= require_tree .
  *= require_self
  */
-<<<<<<<<< Temporary merge branch 1
 
- .custom-update-btn {
-  background-color: #56B280;
-  color: white;
-  border-color: #56B280;
+/* Boutons personnalisés */
+.custom-update-btn {
+    background-color: #56B280;
+    color: white;
+    border-color: #56B280;
 }
 
 .custom-update-btn:hover {
-  background-color: #4da172;
-  border-color: #4da172;
+    background-color: #4da172;
+    border-color: #4da172;
 }
 
 .custom-cancel-btn {
-  background-color: #56B280;
-  color: white;
-  border: none;
+    background-color: #56B280;
+    color: white;
+    border: none;
 }
 
 .custom-cancel-btn:hover {
-  background-color: #4da172;
-  color: white;
+    background-color: #4da172;
+    color: white;
 }
 
-=========
-.content{
+/* Bannière pleine largeur */
+.banner {
+    background-color: black; /* Fond sombre pour la bannière */
+    color: white; /* Texte en blanc */
+    padding: 20px 0; /* Espacement autour du contenu */
+    text-align: center; /* Centrer le texte */
+    margin-bottom: 20px; /* Marge sous la bannière */
+}
+
+.banner .banner-content {
+    display: flex;
+    align-items: center; /* Aligne les éléments sur l'axe vertical */
+    justify-content: flex-start; /* Aligne tout à gauche */
+    flex-direction: row; /* Les éléments s'affichent sur une ligne */
+     /* Optionnel : ajoute un peu d'espace autour */
+}
+
+.banner .banner-img {
+    max-width: 300px; /* Limite la largeur de l'image */
+    height: auto; /* Maintient les proportions de l'image */
+    margin-right: 60px; /* Espace entre l'image et le texte */
+}
+
+.banner h2 {
+    font-size: 2rem;
+    margin-top: 10px;
+}
+
+/* Styles pour le contenu principal */
+.content {
     flex: 1;
 }
 
- .footer{
+/* Footer */
+.footer {
     background-color: #272727;
     color: white;
     display: flex;
     flex-direction: column;
     width: 100%;
-    position: static;
-    bottom: 0;
     margin-top: auto; /* Assure qu'il est toujours poussé vers le bas */
-
 }
-.footer-container{
+
+.footer-container {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
 }
-.footer-content{
+
+.footer-content {
     display: flex;
     flex-direction: column;
     text-align: center;
     margin-top: 15px;
 }
-.footer-text h1{
+
+.footer-text h1 {
     font-size: 30px;
 }
-.footer-text{
+
+.footer-text {
     display: flex;
     flex-direction: column;
     margin-right: 200px;
     font-size: 13px;
 }
-.footer-logo{
+
+.footer-logo {
     max-width: 45px;
     margin-top: 10px;
     margin-left: 70px;
 }
-.footer-column{
+
+.footer-column {
     padding: 5px;
     margin-top: 10px;
 }
-.footer-column li{
+
+.footer-column li {
     list-style-type: none;
     padding: 1px;
     position: relative;
 }
-.footer-column li::before{
+
+.footer-column li::before {
     content: '';
     position: absolute;
     left: 50%;
@@ -98,33 +131,37 @@
     transition: width 0.5s;
     background-color: orange;
 }
-.footer-column li:hover::before{
+
+.footer-column li:hover::before {
     width: 100%;
 }
-.footer-column ul{
+
+.footer-column ul {
     list-style: none;
 }
-.footer a{
+
+.footer a {
     color: white;
     text-decoration: none;
     font-size: 14px;
-
 }
-.footer a:hover{
+
+.footer a:hover {
     color: orange;
 }
-.footer-column h3{
+
+.footer-column h3 {
     color: orange;
     text-transform: uppercase;
     font-size: 16px;
     margin-bottom: 8px;
     margin-left: 32px;
 }
-.footer-copyright{
+
+.footer-copyright {
     background-color: white;
     color: #5E6E89;
     display: flex;
     justify-content: center;
     padding-top: 8px;
-} 
->>>>>>>>> Temporary merge branch 2
+}
