@@ -1,12 +1,24 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="show.css">
+    <title>Card</title>
+</head>
+<body>
+
 <% content_for :title, "Editing item" %>
 
-<h1>Editing item</h1>
+<div class="header">
+  <h1>Editing item</h1>
+</div>
 
-<%= render "form", item: @item %>
+<div class="form-container">
+  <%= render "form", item: @item %>
+</div>
 
-<br>
-
-<div>
+<div class="actions">
   <%= link_to "Show this item", @item %> |
   <%= link_to "Back to items", items_path %>
 </div>
