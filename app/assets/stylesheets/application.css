@@ -13,6 +13,10 @@
  *= require_tree .
  *= require_self
  */
+.content{
+    flex: 1;
+}
+
  .footer{
     background-color: #272727;
     color: white;
@@ -22,7 +26,6 @@
     position: static;
     bottom: 0;
     margin-top: auto; /* Assure qu'il est toujours poussé vers le bas */
-
 }
 .footer-container{
     display: flex;
@@ -96,5 +99,28 @@
     color: #5E6E89;
     display: flex;
     justify-content: center;
-    padding-top: 10px;
+    padding-top: 8px;
+} 
+
+ .custom-update-btn {
+  background-color: #56B280;
+  color: white;
+  border-color: #56B280;
 }
+
+.custom-update-btn:hover {
+  background-color: #4da172;
+  border-color: #4da172;
+}
+
+.custom-cancel-btn {
+  background-color: #56B280;
+  color: white;
+  border: none;
+}
+
+.custom-cancel-btn:hover {
+  background-color: #4da172;
+  color: white;
+}
+

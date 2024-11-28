@@ -1,22 +1,13 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="show.css">
-    <title>Card</title>
-</head>
-<body>
+<%= stylesheet_link_tag 'items/show', media: 'all' %>
 
 <div class="notice">
   <p style="color: green"><%= notice %></p>
 </div>
-<%= stylesheet_link_tag 'items/show', media: 'all' %>
 
 <div class="product-details">
-  <!-- Section gauche : image et titre -->
+<h1 class="product-title"><%= @item.title %></h1>
+  <!-- Section gauche : image  -->
   <div class="product-left">
-  <h1 class="product-title"><%= @item.title %></h1>
     <img src="<%= @item.image_url %>" alt="<%= @item.title %>" class="product-image img-fluid mb-3">
   </div>
 
@@ -25,22 +16,13 @@
     <p class="product-description"><%= @item.description %></p>
     <p class="product-price"><%= number_to_currency(@item.price) %></p>
 
-<div class="item-details">
-  <%= render @item %>
-</div>
-    <%= button_to "Add to Cart", add_item_cart_path(@item), method: :post, class: "btn btn-primary add-to-cart-btn" %>
-
 <div class="actions">
-  <%= link_to "Edit this item", edit_item_path(@item) %> |
+  <%= button_to "Add to Cart", add_item_cart_path(@item), method: :post, class: "btn btn-primary add-to-cart-btn" %>
+
   <%= link_to "Back to items", items_path %>
 </div>
 
-<div class="destroy">
-  <%= button_to "Destroy this item", @item, method: :delete %>
-    <div class="product-actions">
-      <%= link_to "Edit this item", edit_item_path(@item), class: "edit-item-link" %> |
-      <%= link_to "Back to items", items_path, class: "back-to-items-link" %>
-      <%= button_to "Destroy this item", @item, method: :delete, class: "btn btn-danger destroy-item-btn" %>
-    </div>
-  </div>
+
 </div>
+
+<%#button_to "Destroy this item", @item, method: :delete %>
