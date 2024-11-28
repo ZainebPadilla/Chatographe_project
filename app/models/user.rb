@@ -8,7 +8,11 @@ class User < ApplicationRecord
 
    # Validation pour les champs ajoutés
    validates :name, presence: true
-  after_create :create_cart
+  after_create :create_cart, :welcome_send
+
+  def welcome_send
+    UserMailer.welcome_email(self).deliver_now
+  end
 
   private
 
