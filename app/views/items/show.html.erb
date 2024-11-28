@@ -1,55 +1,27 @@
-<!DOCTYPE html>
-<html lang="fr">
+<%= stylesheet_link_tag 'items/show', media: 'all' %>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="show.css">
-  <title>Card</title>
-</head>
+<div class="notice">
+  <p style="color: green"><%= notice %></p>
+</div>
 
-<body>
-
-  <div class="notice">
-    <p style="color: green"><%= notice %></p>
+<div class="product-details">
+  <div class="product-left">
+    <img src="<%= @item.image_url %>" alt="<%= @item.title %>" class="product-image img-fluid mb-3">
   </div>
-  <%= stylesheet_link_tag 'items/show', media: 'all' %>
 
-  <<<<<<< HEAD <div class="product-details">
-    <!-- Section gauche : image et titre -->
-    <div class="product-left">
-      <h1 class="product-title"><%= @item.title %></h1>
-      <img src="<%= @item.image_url %>" alt="<%= @item.title %>" class="product-image img-fluid mb-3">
-    </div>
+  <!-- Section droite : description et boutons -->
+  <div class="product-right">
+  <h1 class="product-title"><%= @item.title %></h1>
+    <p class="product-description"><%= @item.description %></p>
+    <p class="product-price"><%= number_to_currency(@item.price) %></p>
 
-    <!-- Section droite : description et boutons -->
-    <div class="product-right">
-      <p class="product-description"><%= @item.description %></p>
-      <p class="product-price"><%= number_to_currency(@item.price) %></p>
+<div class="actions">
+  <%= button_to "Add to Cart", add_item_cart_path(@item), method: :post, class: "btn btn-primary add-to-cart-btn" %>
 
-      <div class="item-details">
-        <%= render @item %>
-      </div>
-      <%= button_to "Add to Cart", add_item_cart_path(@item), method: :post, class: "btn btn-primary add-to-cart-btn" %>
-
-      <div class="actions">
-        <%= link_to "Edit this item", edit_item_path(@item) %> |
-        <%= link_to "Back to items", items_path %>
-      </div>
-
-      <%#button_to "Destroy this item", @item, method: :delete %>
-      =======
-      <!-- Section droite : description et boutons -->
-      <div class="product-right">
-        <p class="product-description"><%= @item.description %></p>
-        <p class="product-price"><%= number_to_currency(@item.price) %></p>
-
-        <div class="actions">
-          <%= button_to "Add to Cart", add_item_cart_path(@item), method: :post, class: "btn btn-primary add-to-cart-btn" %>
-
-          <%= link_to "Back to items", items_path %>
-        </div>
+  <%= link_to "Back to items", items_path %>
+</div>
 
 
-      </div>
-      >>>>>>> 737af81fd396405752339614760181e0f17b2977
+</div>
+
+<%#button_to "Destroy this item", @item, method: :delete %>
