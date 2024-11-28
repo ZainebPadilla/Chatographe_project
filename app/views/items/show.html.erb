@@ -2,21 +2,22 @@
 
 <%= render @item %>
 
-<div class="product">
+<!--<div class="product">
   <h1><%= @item.title %></h1>
   <p><%= number_to_currency(@item.price) %></p>
-
+  <img src="<%= @item.image_url %>">
+  <%= image_tag @item.image_url, alt: @item.title %>
   <%= button_to "Add to Cart", add_item_cart_path(@item), method: :post, class: "btn btn-primary" %>
+</div>-->
+<div>
+  <h1><%= @item.title %></h1>
+  <p><%= @item.description %></p>
+  <p>Prix: <%= number_to_currency(@item.price) %></p>
+  <%= image_tag @item.image_url, alt: @item.title %>
 </div>
-
 <div>
   <%= link_to "Edit this item", edit_item_path(@item) %> |
   <%= link_to "Back to items", items_path %>
-
   <%= button_to "Destroy this item", @item, method: :delete %>
 </div>
 
-<h1><%= @item.title %></h1>
-<p><%= @item.description %></p>
-<p>Prix: <%= number_to_currency(@item.price) %></p>
-<%= image_tag @item.image_url, alt: @item.title %>

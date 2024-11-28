@@ -65,3 +65,5 @@ group :test do
 end
 
 gem 'devise'
+gem 'carrierwave', '~> 2.0'
+gem 'mini_magick'
