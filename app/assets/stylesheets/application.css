@@ -13,6 +13,10 @@
  *= require_tree .
  *= require_self
  */
+.content{
+    flex: 1;
+}
+
  .footer{
     background-color: #272727;
     color: white;
