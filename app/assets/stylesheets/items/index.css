@@ -14,3 +14,7 @@
     height: 200px; /* Hauteur fixe pour toutes les images */
     object-fit: cover; /* Garder l'aspect de l'image sans la déformer */
 }
+.card-footer{
+    display: flex;
+    justify-content: center;
+}
