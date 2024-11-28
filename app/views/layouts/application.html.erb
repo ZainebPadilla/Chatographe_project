@@ -15,9 +15,6 @@
   <link rel="apple-touch-icon" href="/icon.png">
   <link href="https://unpkg.com/bootswatch@5.3.2/dist/flatly/bootstrap.min.css" rel="stylesheet">
 
-  <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
-  <%= javascript_importmap_tags %>
-</head>
 
 <%= yield :head %>
 
@@ -27,6 +24,7 @@
 <link rel="icon" href="/icon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/icon.png">
 
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-pzjw8f+ua7Kw1TIq0pM4Xq5e64R7Fflw9eW8U9g4E5D2P4C6o8Vlk1+kvQ5Sk8gA" crossorigin="anonymous">
 
 <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
 <%= javascript_importmap_tags %>

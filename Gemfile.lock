@@ -310,6 +310,7 @@ DEPENDENCIES
   debug
   devise
   dotenv
+  dotenv
   importmap-rails
   jbuilder
   pg (~> 1.1)

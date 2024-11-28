@@ -1,11 +1,11 @@
-<p style="color: green"><%= notice %></p>
-
-<%= render @item %>
 
 <div class="product">
   <h1><%= @item.title %></h1>
   <p><%= number_to_currency(@item.price) %></p>
-
+  
+  <!-- Ajouter la classe Bootstrap img-fluid pour rendre l'image responsive -->
+  <img src="<%= @item.image_url %>" alt="<%= @item.title %>" class="img-fluid mb-3" style="max-width: 100%; height: auto;">
+  
   <%= button_to "Add to Cart", add_item_cart_path(@item), method: :post, class: "btn btn-primary" %>
 </div>
 
