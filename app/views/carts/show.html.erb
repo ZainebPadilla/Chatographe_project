@@ -7,7 +7,7 @@
     <% @items.each do |item| %>
     <li>
       <strong><%= item.title %></strong> - <%= number_to_currency(item.price) %>
-      <%= button_to 'Retirer', remove_item_cart_path(item), method: :delete, data: { confirm: 'Êtes-vous sûr ?' }, class: 'btn btn-danger btn-sm' %>
+      <%= button_to 'Retirer', remove_item_cart_path(item), method: :delete, data: { confirm: 'Êtes-vous sûr ?' }, class: "btn btn-outline-danger" %>
     </li>
     <% end %>
   </ul>
@@ -18,5 +18,5 @@
   <% else %>
   <p>Votre panier est vide.</p>
   <% end %>
-  <%= button_to "Passer commande (NEXT GEN)", checkout_create_path(total: @items.sum(&:price)), class: "btn btn-primary", data: { turbo: false } %>
+  <%= button_to "Passer commande", checkout_create_path(total: @items.sum(&:price)), class: "btn btn-success", data: { turbo: false } %>
   <%= link_to 'Continuer vos achats', items_path %>
