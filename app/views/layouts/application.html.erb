@@ -49,6 +49,10 @@
             <%= link_to "Galerie", galeries_path, class: "btn btn-outline-primary me-2"%>
           </li>
 
+          <li class="nav-item">
+            <%= link_to 'À propos', about_path, class: 'btn btn-primary' %>
+          </li>
+
           <% if user_signed_in? %>
 
           <li class="nav-item">
