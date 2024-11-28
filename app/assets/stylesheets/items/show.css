@@ -1,0 +1,87 @@
+/* Conteneur principal du produit */
+.product-details {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 40px 0;
+    background-color: #ECF0F1;
+  }
+/* Conteneur pour l'image et le titre (gauche) */
+.product-left {
+    width: 400px; /* Largeur fixe pour agrandir la card */
+    height: 400px; /* Hauteur égale à la largeur pour un carré parfait */
+    display: flex;
+    text-align: center;
+    flex-direction: column; /* Alignement en colonne pour l'image et le titre */
+    justify-content: center;
+    border: 2px solid #555;
+    border-radius: 16px; /* Coins légèrement arrondis */
+    box-shadow: 20px 4px 18px rgba(0, 0, 0, 0.1); /* Ombre pour l'effet de card */
+    margin-right: 20px; /* Espacement entre l'image et la description */
+    margin-top: 40px;
+}
+  /* Titre du produit (au-dessus de l'image) */
+.product-title {
+    font-size: 2rem;
+    color: #56B280;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 20px; /* Espacement entre le titre et l'image */
+  }
+  /* Rétrécir l'image et assurer qu'elle soit de taille uniforme */
+.product-image {
+    width: 100%; /* Fixe la largeur de toutes les images */
+    height: 100%;      /* Assure que l'image garde son ratio */
+    object-fit: cover; /* Pour que l'image remplisse son conteneur sans déformer son aspect */
+    border-radius: 8px; /* Optionnel: arrondir les bords de l'image */
+    margin-bottom: 25px; /* Espacement sous l'image */
+    aspect-ratio: 16 / 9; /* Rend l'image parfaitement carrée */
+  }
+  /* Section droite : description et boutons */
+.product-right {
+    flex: 2; /* Laisser un peu plus de place pour la description et les boutons */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-top: 45px;
+    margin-left: 10px;  /* Réduire l'espacement entre la section gauche et droite */
+}
+
+/* Espacement entre le prix, la description et les boutons */
+.product-price {
+    font-size: 1.25rem;
+    color: #555;
+    margin-top: 230px;
+    margin-bottom: 10px; /* Réduit l'espacement sous le prix */
+}
+
+.product-description {
+    font-size: 25px;;
+    color: #555;
+    margin-top: 0; /* Réduit l'espacement entre la description et le prix */
+    margin-bottom: 15px; /* Espacement ajusté entre la description et les boutons */
+}
+
+/* Boutons */
+.add-to-cart-btn {
+    margin-bottom: 10px; /* Espacement entre le bouton "Add to Cart" et les autres actions */
+}
+
+/* Liens et bouton pour éditer/détruire */
+.product-actions {
+    display: flex;
+    gap: 10px; /* Espacement entre les actions */
+    margin-top: 10px; /* Espacement entre le bouton "Add to Cart" et les actions */
+}
+
+.back-to-items-link {
+    font-size: 1rem;
+    color: #007bff;
+    text-decoration: none;
+}

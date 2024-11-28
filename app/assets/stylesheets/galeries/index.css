@@ -1,0 +1,16 @@
+.title{
+    text-align: center;
+}
+.card {
+    display: flex;
+    flex-direction: column; /* Pour s'assurer que les éléments à l'intérieur de la carte s'empilent verticalement */
+    height: 100%;
+}
+.card-title{
+    font-size: 32px;;
+}
+.card-img-top {
+    width: 100%; /* L'image occupe toute la largeur de la carte */
+    height: 200px; /* Hauteur fixe pour toutes les images */
+    object-fit: cover; /* Garder l'aspect de l'image sans la déformer */
+}
