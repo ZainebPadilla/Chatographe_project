@@ -27,8 +27,10 @@
   <link rel="apple-touch-icon" href="/icon.png">
 
 
-<%= javascript_importmap_tags %>
-<%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
+
+  <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+  <%= javascript_importmap_tags %>
+  <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
 
 </head>
 
@@ -68,10 +70,10 @@
       </div>
     </div>
   </nav>
-<div class="content">
-  <%= yield %>
-  <script src="https://js.stripe.com/v3/"></script>
-</div>
+  <div class="content">
+    <%= yield %>
+    <script src="https://js.stripe.com/v3/"></script>
+  </div>
   <%= render 'layouts/footer' %>
 
 
