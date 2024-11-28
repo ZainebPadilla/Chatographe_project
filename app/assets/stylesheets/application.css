@@ -101,3 +101,26 @@
     justify-content: center;
     padding-top: 8px;
 } 
+
+ .custom-update-btn {
+  background-color: #56B280;
+  color: white;
+  border-color: #56B280;
+}
+
+.custom-update-btn:hover {
+  background-color: #4da172;
+  border-color: #4da172;
+}
+
+.custom-cancel-btn {
+  background-color: #56B280;
+  color: white;
+  border: none;
+}
+
+.custom-cancel-btn:hover {
+  background-color: #4da172;
+  color: white;
+}
+
