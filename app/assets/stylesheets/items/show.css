@@ -1,0 +1,87 @@
+/* Conteneur principal du produit */
+.product-details {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+  }
+/* Conteneur pour l'image et le titre (gauche) */
+.product-left {
+    flex: 1; /* Laisser l'espace à gauche prendre toute la largeur */
+    display: flex;
+    flex-direction: column; /* Alignement en colonne pour l'image et le titre */
+    justify-content: flex-start;
+    margin-right: 20px; /* Espacement entre l'image et la description */
+  }
+  /* Titre du produit (au-dessus de l'image) */
+.product-title {
+    font-size: 2rem;
+    color: #56B280;
+    margin-bottom: 10px; /* Espacement entre le titre et l'image */
+  }
+  /* Rétrécir l'image et assurer qu'elle soit de taille uniforme */
+.product-image {
+    max-width: 800px;  /* Vous pouvez ajuster cette valeur selon la taille souhaitée */
+    height: auto;      /* Assure que l'image garde son ratio */
+    object-fit: cover; /* Pour que l'image remplisse son conteneur sans déformer son aspect */
+    border-radius: 8px; /* Optionnel: arrondir les bords de l'image */
+    margin-bottom: 15px; /* Espacement sous l'image */
+  }
+  /* Section droite : description et boutons */
+.product-right {
+    flex: 2; /* Laisser un peu plus de place pour la description et les boutons */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-top: 45px;
+    margin-left: 10px;  /* Réduire l'espacement entre la section gauche et droite */
+}
+
+/* Espacement entre le prix, la description et les boutons */
+.product-price {
+    font-size: 1.25rem;
+    color: #555;
+    margin-top: 230px;
+    margin-bottom: 10px; /* Réduit l'espacement sous le prix */
+}
+
+.product-description {
+    font-size: 25px;;
+    color: #555;
+    margin-top: 0; /* Réduit l'espacement entre la description et le prix */
+    margin-bottom: 15px; /* Espacement ajusté entre la description et les boutons */
+}
+
+/* Boutons */
+.add-to-cart-btn {
+    margin-bottom: 10px; /* Espacement entre le bouton "Add to Cart" et les autres actions */
+}
+
+/* Liens et bouton pour éditer/détruire */
+.product-actions {
+    display: flex;
+    gap: 10px; /* Espacement entre les actions */
+    margin-top: 10px; /* Espacement entre le bouton "Add to Cart" et les actions */
+}
+
+.edit-item-link, .back-to-items-link {
+    font-size: 1rem;
+    color: #007bff;
+    text-decoration: none;
+}
+
+.destroy-item-btn {
+    font-size: 1rem;
+    color: white;
+    background-color: #dc3545; /* Rouge pour le bouton de suppression */
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    border-radius: 4px;
+}

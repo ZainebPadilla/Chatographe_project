@@ -1,4 +1,8 @@
+<%= stylesheet_link_tag 'galeries/index', media: 'all' %>
+
+<div class="title">
 <h1>Liste des chatons</h1>
+</div>
 
 <div class="container">
   <div class="row">
@@ -14,7 +18,7 @@
             <p><%= number_to_currency(item.price) %></p>
           </div>
           <div class="card-footer">
-            <%= link_to "Show this item", item, class: "btn btn-primary" %> 
+            <%= link_to "Voir le produit", item, class: "btn btn-primary" %> 
           </div>
         </div>
       </div>

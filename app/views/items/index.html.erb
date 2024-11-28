@@ -1,21 +1,29 @@
+<%= stylesheet_link_tag 'items/index', media: 'all' %>
 
 <p style="color: green"><%= notice %></p>
-
-<% content_for :title, "Items" %>
-
-<h1>Items</h1>
-
+<div class="title">
+<h1>Liste des chatons</h1>
+</div>
 
 <div class="container">
   <div class="row">
     <% @items.each do |item| %>
       
-      <div class="col-md-3">
-        <%= render "item", item: item %>
-        <p>
-          <%= link_to "Show this item", item %> 
-        </p>
+    
+      <div class="col-md-3 mb-4">
+        <div class="card">
+          <img src="<%= item.image_url %>" class="card-img-top" alt="<%= item.title %>">
+          <div class="card-body">
+            <h5 class="card-title"><%= item.title %></h5>
+            <p class="card-text"><%= item.description %></p>
+            <p><%= number_to_currency(item.price) %></p>
+          </div>
+          <div class="card-footer">
+            <%= link_to "Voir le produit", item, class: "btn btn-primary" %> 
+          </div>
+        </div>
       </div>
+
     <% end %>
   </div>
 </div>

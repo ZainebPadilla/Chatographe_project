@@ -1,17 +1,23 @@
+<%= stylesheet_link_tag 'items/show', media: 'all' %>
 
-<div class="product">
-  <h1><%= @item.title %></h1>
-  <p><%= number_to_currency(@item.price) %></p>
-  
-  <!-- Ajouter la classe Bootstrap img-fluid pour rendre l'image responsive -->
-  <img src="<%= @item.image_url %>" alt="<%= @item.title %>" class="img-fluid mb-3" style="max-width: 100%; height: auto;">
-  
-  <%= button_to "Add to Cart", add_item_cart_path(@item), method: :post, class: "btn btn-primary" %>
-</div>
+<div class="product-details">
+  <!-- Section gauche : image et titre -->
+  <div class="product-left">
+  <h1 class="product-title"><%= @item.title %></h1>
+    <img src="<%= @item.image_url %>" alt="<%= @item.title %>" class="product-image img-fluid mb-3">
+  </div>
 
-<div>
-  <%= link_to "Edit this item", edit_item_path(@item) %> |
-  <%= link_to "Back to items", items_path %>
+  <!-- Section droite : description et boutons -->
+  <div class="product-right">
+    <p class="product-description"><%= @item.description %></p>
+    <p class="product-price"><%= number_to_currency(@item.price) %></p>
 
-  <%= button_to "Destroy this item", @item, method: :delete %>
+    <%= button_to "Add to Cart", add_item_cart_path(@item), method: :post, class: "btn btn-primary add-to-cart-btn" %>
+
+    <div class="product-actions">
+      <%= link_to "Edit this item", edit_item_path(@item), class: "edit-item-link" %> |
+      <%= link_to "Back to items", items_path, class: "back-to-items-link" %>
+      <%= button_to "Destroy this item", @item, method: :delete, class: "btn btn-danger destroy-item-btn" %>
+    </div>
+  </div>
 </div>
