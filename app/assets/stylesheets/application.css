@@ -22,7 +22,6 @@
     position: static;
     bottom: 0;
     margin-top: auto; /* Assure qu'il est toujours poussé vers le bas */
-
 }
 .footer-container{
     display: flex;
@@ -96,5 +95,5 @@
     color: #5E6E89;
     display: flex;
     justify-content: center;
-    padding-top: 10px;
-}
+    padding-top: 8px;
+} 
