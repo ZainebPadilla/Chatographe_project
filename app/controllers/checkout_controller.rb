@@ -1,5 +1,9 @@
 class CheckoutController < ApplicationController
   def create
+    Stripe.api_key = ENV['STRIPE_SECRET_KEY']
+
+
+
     @total = params[:total].to_d
     @event_id = params[:event_id]
     @session = Stripe::Checkout::Session.create(

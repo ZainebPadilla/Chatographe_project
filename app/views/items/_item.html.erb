@@ -1,8 +1,39 @@
-<div class="card">
-  <img src="<%= item.image_url %>" class="card-img-top" alt="<%= item.title %>">
-  <div class="card-body">
-    <h5 class="card-title"><%= item.title %></h5>
-    <p class="card-text"><%= item.description %></p>
-    <p><%= number_to_currency(item.price) %></p>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="show.css">
+    <title>Card</title>
+</head>
+<body>
+
+<div id="<%= dom_id item %>">
+  <div class="item-title">
+    <p>
+      <strong>Title:</strong>
+      <%= item.title %>
+    </p>
+  </div>
+
+  <div class="item-description">
+    <p>
+      <strong>Description:</strong>
+      <%= item.description %>
+    </p>
+  </div>
+
+  <div class="item-price">
+    <p>
+      <strong>Price:</strong>
+      <%= item.price %>
+    </p>
+  </div>
+
+  <div class="item-image-url">
+    <p>
+      <strong>Image url:</strong>
+      <%= item.image_url %>
+    </p>
   </div>
 </div>
