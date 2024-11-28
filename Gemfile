@@ -64,3 +64,7 @@ end
 gem 'devise'
 
 gem 'dotenv-rails'
+
+gem 'mailjet'
+
+gem 'letter_opener'

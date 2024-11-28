@@ -1,16 +1,22 @@
-.title{
+.text-center{
     text-align: center;
+    padding-bottom: 1px;
+    margin-bottom: 1px;
+
 }
-.card {
-    display: flex;
-    flex-direction: column; /* Pour s'assurer que les éléments à l'intérieur de la carte s'empilent verticalement */
-    height: 100%;
+/* Rétrécir la largeur du carrousel */
+#carouselExample {
+    max-width: 90%; /* Réduit la largeur du carrousel à 80% de la largeur du conteneur parent */
+    margin: 0 auto; /* Centre le carrousel horizontalement */
+    padding-bottom: 20px; /* Ajoute un peu d'espace au-dessus du carrousel */
+    padding-bottom: 55px;
 }
-.card-title{
-    font-size: 32px;;
-}
-.card-img-top {
-    width: 100%; /* L'image occupe toute la largeur de la carte */
-    height: 200px; /* Hauteur fixe pour toutes les images */
-    object-fit: cover; /* Garder l'aspect de l'image sans la déformer */
+
+/* Ajuster la taille des images à l'intérieur du carrousel */
+#carouselExample .carousel-item img {
+    width: 100%; /* Assure que l'image prend toute la largeur du carrousel */
+    max-height: 500px; /* Limite la hauteur de l'image */
+    object-fit: cover; /* Assure que l'image remplit le carrousel sans déformer */
+    border-radius: 8px; /* Ajoute des coins arrondis pour un meilleur visuel */
+
 }
