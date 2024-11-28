@@ -15,7 +15,7 @@
   </div>
   <%= stylesheet_link_tag 'items/show', media: 'all' %>
 
-  <div class="product-details">
+  <<<<<<< HEAD <div class="product-details">
     <!-- Section gauche : image et titre -->
     <div class="product-left">
       <h1 class="product-title"><%= @item.title %></h1>
@@ -38,3 +38,18 @@
       </div>
 
       <%#button_to "Destroy this item", @item, method: :delete %>
+      =======
+      <!-- Section droite : description et boutons -->
+      <div class="product-right">
+        <p class="product-description"><%= @item.description %></p>
+        <p class="product-price"><%= number_to_currency(@item.price) %></p>
+
+        <div class="actions">
+          <%= button_to "Add to Cart", add_item_cart_path(@item), method: :post, class: "btn btn-primary add-to-cart-btn" %>
+
+          <%= link_to "Back to items", items_path %>
+        </div>
+
+
+      </div>
+      >>>>>>> 737af81fd396405752339614760181e0f17b2977

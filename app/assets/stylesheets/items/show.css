@@ -8,29 +8,39 @@
     border: 1px solid #ddd;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    margin: 20px 0;
+    margin: 40px 0;
+    background-color: #ECF0F1;
   }
 /* Conteneur pour l'image et le titre (gauche) */
 .product-left {
-    flex: 1; /* Laisser l'espace à gauche prendre toute la largeur */
+    width: 400px; /* Largeur fixe pour agrandir la card */
+    height: 400px; /* Hauteur égale à la largeur pour un carré parfait */
     display: flex;
+    text-align: center;
     flex-direction: column; /* Alignement en colonne pour l'image et le titre */
-    justify-content: flex-start;
+    justify-content: center;
+    border: 2px solid #555;
+    border-radius: 16px; /* Coins légèrement arrondis */
+    box-shadow: 20px 4px 18px rgba(0, 0, 0, 0.1); /* Ombre pour l'effet de card */
     margin-right: 20px; /* Espacement entre l'image et la description */
-  }
+    margin-top: 40px;
+}
   /* Titre du produit (au-dessus de l'image) */
 .product-title {
     font-size: 2rem;
     color: #56B280;
-    margin-bottom: 10px; /* Espacement entre le titre et l'image */
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 20px; /* Espacement entre le titre et l'image */
   }
   /* Rétrécir l'image et assurer qu'elle soit de taille uniforme */
 .product-image {
-    max-width: 800px;  /* Vous pouvez ajuster cette valeur selon la taille souhaitée */
-    height: auto;      /* Assure que l'image garde son ratio */
+    width: 100%; /* Fixe la largeur de toutes les images */
+    height: 100%;      /* Assure que l'image garde son ratio */
     object-fit: cover; /* Pour que l'image remplisse son conteneur sans déformer son aspect */
     border-radius: 8px; /* Optionnel: arrondir les bords de l'image */
-    margin-bottom: 15px; /* Espacement sous l'image */
+    margin-bottom: 25px; /* Espacement sous l'image */
+    aspect-ratio: 16 / 9; /* Rend l'image parfaitement carrée */
   }
   /* Section droite : description et boutons */
 .product-right {
@@ -70,18 +80,8 @@
     margin-top: 10px; /* Espacement entre le bouton "Add to Cart" et les actions */
 }
 
-.edit-item-link, .back-to-items-link {
+.back-to-items-link {
     font-size: 1rem;
     color: #007bff;
     text-decoration: none;
-}
-
-.destroy-item-btn {
-    font-size: 1rem;
-    color: white;
-    background-color: #dc3545; /* Rouge pour le bouton de suppression */
-    border: none;
-    padding: 8px 16px;
-    cursor: pointer;
-    border-radius: 4px;
 }

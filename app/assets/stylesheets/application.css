@@ -13,26 +13,88 @@
  *= require_tree .
  *= require_self
  */
+ .footer{
+    background-color: #272727;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    position: static;
+    bottom: 0;
+    margin-top: auto; /* Assure qu'il est toujours poussé vers le bas */
 
- .custom-update-btn {
-  background-color: #56B280;
-  color: white;
-  border-color: #56B280;
 }
-
-.custom-update-btn:hover {
-  background-color: #4da172;
-  border-color: #4da172;
+.footer-container{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
-
-.custom-cancel-btn {
-  background-color: #56B280;
-  color: white;
-  border: none;
+.footer-content{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 15px;
 }
-
-.custom-cancel-btn:hover {
-  background-color: #4da172;
-  color: white;
+.footer-text h1{
+    font-size: 30px;
 }
+.footer-text{
+    display: flex;
+    flex-direction: column;
+    margin-right: 200px;
+    font-size: 13px;
+}
+.footer-logo{
+    max-width: 45px;
+    margin-top: 10px;
+    margin-left: 70px;
+}
+.footer-column{
+    padding: 5px;
+    margin-top: 10px;
+}
+.footer-column li{
+    list-style-type: none;
+    padding: 1px;
+    position: relative;
+}
+.footer-column li::before{
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 100%; /* Positionne en bas de l'élément */
+    width: 0; /* Ligne invisible au départ */
+    height: 2px; /* Hauteur de la ligne */
+    transform: translateX(-50%);
+    transition: width 0.5s;
+    background-color: orange;
+}
+.footer-column li:hover::before{
+    width: 100%;
+}
+.footer-column ul{
+    list-style: none;
+}
+.footer a{
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
 
+}
+.footer a:hover{
+    color: orange;
+}
+.footer-column h3{
+    color: orange;
+    text-transform: uppercase;
+    font-size: 16px;
+    margin-bottom: 8px;
+    margin-left: 32px;
+}
+.footer-copyright{
+    background-color: white;
+    color: #5E6E89;
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+}
