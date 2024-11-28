@@ -1,6 +1,6 @@
 class CheckoutController < ApplicationController
   def create
-    Stripe.api_key = ENV['STRIPE_SECRET_KEY']
+    Stripe.api_key = ENV['SECRET_KEY']
 
 
 
